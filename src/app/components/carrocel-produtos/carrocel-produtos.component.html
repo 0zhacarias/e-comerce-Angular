@@ -1,0 +1,33 @@
+
+
+
+<div class="max-w-7xl p-4 bg-white shadow-none border-round-sm  ">
+    <div>
+      <h2 class="font-semibold leading-8 text-gray-900 text-4xl">Related products</h2>
+ <!--      <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, voluptatibus.</p> -->
+    </div>
+</div>
+
+    <p-carousel [value]="products" [numVisible]="4" [numScroll]="2" [responsiveOptions]="responsiveOptions" [circular]="true" [showIndicators]="true" [styleClass]="'custom-carousel'" >
+
+        <ng-template let-product #item>
+            <div class=" border border-surface-300 border-dashed dark:border-surface-700 rounded m-2 p-4">
+                <div class="mb-10">
+                    <div class="relative mx-auto">
+                        <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />
+                </div>
+                </div>
+                <div class="mb-4 font-medium">{{ product.name }}</div>
+                <div class="flex justify-between items-center">
+                    <div class="mt-0 font-semibold text-xl">{{ '$' + product.price }}</div>
+                    <span>
+                        <p-button icon="pi pi-heart" severity="danger" [outlined]="true"  [rounded]="true"/>
+                        
+                        <p-button icon="pi pi-shopping-cart" styleClass="ml-2" [rounded]="true" severity="info" [outlined]="true"/>
+                    </span>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+    

@@ -1,0 +1,67 @@
+
+<div class="max-w-7xl mx-auto p-3 shadow-none">
+    <div class="mb-3">
+      <p class="text-sm text-gray-500">Escolhas dos editores</p>
+      <h2 class="text-3xl font-bold text-gray-900 mt-2">Achados essenciais de Páscoa</h2>
+      <h6 class="text-gray-900 mb-2">Ver detalhes ></h6>
+    </div>
+    <div class="grid nested-grid  border-1 border-gray-400 border-round-md border-dashed rounded-lg">
+      <div class="col-9">
+          <div class="grid p-4">
+              <div class="col-6">
+                  <div class="text-center p-6 border-round-sm bg-gray-100 font-bold">Escolhe o que é melhor para sí</div>
+              </div>
+              <div class="col-3">
+                  <div class="text-center border-round-sm">
+                    <img src="https://i.etsystatic.com/12788147/c/1333/1059/0/518/il/5935b7/5795772079/il_600x600.5795772079_hls2.jpg" class="h-15rem" alt="Imgem de ondas"></div>
+              </div>
+              <div class="col-3">
+                <div class="text-center border-round-sm">
+                  <img src="https://i.etsystatic.com/48998027/c/1163/1163/784/447/il/7a3d59/6677046335/il_300x300.6677046335_qa7u.jpg" class="h-15rem" alt="Imgem de ondas"></div>
+              </div>
+              <div class="col-3">
+                  <div class="text-center border-round-sm">
+                    <img src="https://i.etsystatic.com/5348211/r/il/d30f5d/1831514306/il_300x300.1831514306_pv73.jpg" class="h-15rem" alt="Imgem de ondas"></div>
+              </div>
+              <div class="col-3">
+                  <div class="text-center border-round-sm">
+                    <img src="https://i.etsystatic.com/56948573/r/il/44ed21/6691515489/il_680x540.6691515489_8ihj.jpg" class="h-15rem" alt="Imgem de ondas"></div>
+              </div>
+              <div class="col-3">
+                  <div class="text-center border-round-sm">
+                    <img src="https://i.etsystatic.com/18901979/r/il/ea6107/5764823620/il_680x540.5764823620_ht3o.jpg" class="h-15rem" alt="Imgem de ondas"></div>
+              </div>
+              <div class="col-3">
+                  <div class="text-center border-round-sm">
+                    <img src="https://i.etsystatic.com/56948573/r/il/44ed21/6691515489/il_680x540.6691515489_8ihj.jpg" class="h-15rem" alt="Imgem de ondas"></div>
+              </div>
+          </div>
+      </div>
+      <div class="col-3" (mouseenter)="isHovered = true"
+      (mouseleave)="isHovered = false">
+          <div class="relative border-round-lg shadow-none overflow-hidden transition-all duration-300 "
+           > 
+             <img src="https://i.etsystatic.com/12865899/r/il/067c4f/2831604852/il_680x540.2831604852_33eh.jpg"
+            alt="Front of men&#039;s Basic Tee in black."
+            class="aspect-square w-full rounded-border rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-130">
+            <p-button 
+            icon="pi pi-heart" 
+            [rounded]="true" severity="info" [outlined]="true"
+            class="absolute top-2 right-2"
+            *ngIf="isHovered"
+          ></p-button>
+
+          <!-- Preço -->
+        <div *ngIf="isHovered"
+                    class="absolute bottom-2 left-2 bg-white-800 text-black border-1 px-3 py-1 border-round shadow-md text-sm font-medium"
+                   
+          >
+            USD 45.00
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+
+  
+

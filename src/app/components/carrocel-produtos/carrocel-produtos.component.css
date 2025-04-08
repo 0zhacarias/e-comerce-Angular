@@ -1,0 +1,12 @@
+::ng-deep .custom-carousel .p-carousel-indicators .p-carousel-indicator {
+    background-color: #e0e0e0; /* cor padrão */
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  ::ng-deep .custom-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight {
+    background-color: #f59e0b; /* cor do indicador ativo (amarelo por ex) */
+  }

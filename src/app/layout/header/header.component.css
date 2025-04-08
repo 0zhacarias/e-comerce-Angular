@@ -1,0 +1,88 @@
+.layout-topbar {
+    position: fixed;
+    height: 4rem;
+    z-index: 997;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: #fff;
+    transition: left var(--layout-section-transition-duration);
+    display: flex;
+    align-items: center;
+
+}
+
+.layout-topbar-logo-container {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+}
+
+.layout-topbar-logo {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #faa;
+    font-weight: 500;
+    gap: 0.5rem;
+
+}
+.layout-topbar-logo span {
+    font-size: 1.5rem;
+    color: #b81919;
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+.layout-topbar-action {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+i {
+    font-size: 1.25rem;
+}
+
+span {
+    font-size: 1rem;
+    display: none;
+ 
+    color: #fff;
+}
+
+.layout-menu-button {
+    margin-right: 0.5rem;
+}
+
+.layout-topbar-menu-button {
+    display: none;
+}
+.layout-topbar-menu-content >span{
+    background-color: #fff;
+}
+.layout-topbar-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+    background-color: #fff;
+}
+
+.layout-topbar-menu-content {
+    display: flex;
+    gap: 1rem;
+    background-color: #fff;
+  
+}
+
+.layout-config-menu {
+    display: flex;
+    gap: 1rem;
+}
