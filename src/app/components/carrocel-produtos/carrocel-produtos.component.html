@@ -9,10 +9,10 @@
     </div>
 </div>
 
-    <p-carousel [value]="products" [numVisible]="4" [numScroll]="2" [responsiveOptions]="responsiveOptions" [circular]="true" [showIndicators]="true" [styleClass]="'custom-carousel'" >
+    <p-carousel [value]="products" [numVisible]="4" [numScroll]="2"  [responsiveOptions]="responsiveOptions" [circular]="true" [showIndicators]="true" [styleClass]="'custom-carousel'" >
 
         <ng-template let-product #item>
-            <div class=" border border-surface-300 border-dashed dark:border-surface-700 rounded m-2 p-4">
+            <div class=" border border-surface-300 border-dashed dark:border-surface-700 rounded m-2 p-4 hover:shadow-xl">
                 <div class="mb-10">
                     <div class="relative mx-auto">
                         <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />

@@ -1,4 +1,19 @@
+
 <div class="bg-white3">
+  <div class="card flex justify-content-center align-items-center border-round-sm shadow-none bg-white3">
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipiscing
+    </div>
+    <p-divider layout="vertical" />
+    <div class="flex flex-column align-items-center justify-content-center">
+      <p-button icon="pi pi-heart" [rounded]="true" severity="info" [outlined]="true"
+        class=""></p-button> <p class="text-2xl">Suporte 24/24</p>
+    </div>
+    <p-divider layout="vertical" />
+    <div>
+      At vero eos et accusamus et
+    </div>
+  </div>
   <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-4">
     <h2 class="font-semibold leading-8 text-gray-900 text-4xl">Novos Produtos</h2>
     <div class="my-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-4">
@@ -96,9 +111,14 @@
  -->
       <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-4">
         <div class="group relative">
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg"
-            alt="Front of men&#039;s Basic Tee in black."
-            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80  hover:shadow-xl">
+          <div
+            class="w-full lg:h-80 object-cover group-hover:opacity-75  lg:aspect-auto rounded-md bg-white aspect-square ">
+
+
+            <img
+              src="https://ncrangola.vtexassets.com/arquivos/ids/167693-198-198?v=638784949468300000&width=198&height=198&aspect=true"
+              alt="Front of men&#039;s Basic Tee in black." class="w-58 pt-2">
+          </div>
           <div class="mt-4 flex justify-between  hover:shadow-xl px-4 rounded-md">
             <div>
               <h3 class="text-sm text-gray-700">
@@ -112,10 +132,63 @@
             <p class="text-sm font-medium text-gray-900 text-2xl">$35</p>
           </div>
         </div>
+        <div class="group relative " (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
+          <div
+            class="w-58 lg:h-80 object-cover group-hover:opacity-75  lg:aspect-auto rounded-md bg-white aspect-square align-content-center center ">
+            <img
+              src="https://ncrangola.vtexassets.com/arquivos/ids/164712-198-198?v=638753999597100000&width=198&height=198&aspect=true"
+              alt="Front of men&#039;s Basic Tee in black." class="w-48 pt-2  mx-auto">
+            <p-button icon="pi pi-heart" [rounded]="true" severity="info" [outlined]="true"
+              class="absolute top-2 left-2" *ngIf="isHovered"></p-button>
+
+            <p-button *ngIf="isHovered" icon="pi pi-cart-plus"
+              class="absolute top-2 right-2 flex justify-content-center pt-2" severity="info" [rounded]="true"
+              [raised]="true" [outlined]="true" [size]="'small'" placeholder="Adicionar ao carrinho">
+              <span class="text-sm">Adicionar ao carrinho</span>
+
+            </p-button>
+            <h3 class="flex justify-content-center center">Tintero</h3>
+          </div>
+          <div *ngIf="isHovered" class="flex justify-between p-2">
+            <div>
+              <h3 class="font-medium text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0 "></span>
+                  Tintero
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Black</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900 text-2xl">3000.00 <sup class="text-sm">AOA</sup></p>
+
+          </div>
+          <p-button *ngIf="isHovered" icon="pi pi-cart-plus" [label]="'Itens similar'"
+            class=" flex justify-content-center" severity="info" [rounded]="true" [raised]="true" [outlined]="true">
+
+          </p-button>
+        </div>
+        <div class="group relative ">
+
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg"
+            alt="Front of men&#039;s Basic Tee in black."
+            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Black</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+        </div>
         <div class="group relative">
           <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg"
             alt="Front of men&#039;s Basic Tee in black."
-            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75  lg:aspect-auto lg:h-80">
+            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
           <div class="mt-4 flex justify-between">
             <div>
               <h3 class="text-sm text-gray-700">
@@ -130,41 +203,6 @@
           </div>
         </div>
         <div class="group relative ">
-          
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg"
-            alt="Front of men&#039;s Basic Tee in black."
-            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-          <div class="mt-4 flex justify-between">
-            <div>
-              <h3 class="text-sm text-gray-700">
-                <a href="#">
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  Basic Tee
-                </a>
-              </h3>
-              <p class="mt-1 text-sm text-gray-500">Black</p>
-            </div>
-            <p class="text-sm font-medium text-gray-900">$35</p>
-          </div>
-        </div>
-        <div class="group relative">
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg"
-            alt="Front of men&#039;s Basic Tee in black."
-            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-          <div class="mt-4 flex justify-between">
-            <div>
-              <h3 class="text-sm text-gray-700">
-                <a href="#">
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  Basic Tee
-                </a>
-              </h3>
-              <p class="mt-1 text-sm text-gray-500">Black</p>
-            </div>
-            <p class="text-sm font-medium text-gray-900">$35</p>
-          </div>
-        </div>
-        <div class="group relative">
           <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg"
             alt="Front of men&#039;s Basic Tee in black."
             class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
@@ -186,13 +224,9 @@
       </div>
     </div>
   </div>
+</div>
+<div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-4">
 
-  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-4">
-
-    <app-carrocel-produtos></app-carrocel-produtos>
-  </div>
-  <app-produto-mes></app-produto-mes>
-
-
- 
-  
+  <app-carrocel-produtos></app-carrocel-produtos>
+</div>
+<app-produto-mes></app-produto-mes>

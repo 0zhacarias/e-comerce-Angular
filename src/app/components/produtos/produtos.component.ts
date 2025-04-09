@@ -1,19 +1,30 @@
-import { Component,HostBinding, inject } from '@angular/core';
+import { Component,HostBinding, inject,OnInit } from '@angular/core';
 
 import { CarrocelProdutosComponent } from "../carrocel-produtos/carrocel-produtos.component";
 import { ButtonModule } from 'primeng/button';
 import { ProdutoMesComponent } from "../../produto-mes/produto-mes.component";
+import { CommonModule } from '@angular/common';
+import { InputNumber } from 'primeng/inputnumber';
+import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { DividerModule } from 'primeng/divider';
 
 @Component({
   selector: 'app-produtos',
-  imports: [ButtonModule, CarrocelProdutosComponent, ProdutoMesComponent],
+  imports: [ButtonModule, CarrocelProdutosComponent, ProdutoMesComponent,CommonModule,DividerModule, FormsModule,ReactiveFormsModule],
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.css',
 
 })
-export class ProdutosComponent {
- /*  ngOnInit() {
-    // Initialize component logic here
-  } */
+export class ProdutosComponent  implements OnInit {
+  isHovered = false;
+  value1: number = 1;
+  formGroup!: FormGroup;
+
+  ngOnInit() {
+      this.formGroup = new FormGroup({
+          value: new FormControl(1234)
+      });
+  }
 
 }
