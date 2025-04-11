@@ -1,12 +1,12 @@
 .main{
 /*     margin-top: 50px;
- */    background: #edf1f5;
+ */    background: linear-gradient(to right, #ffeeee, #e3e2ff);
     width: 100%;
     /* min-height: 100%;
     display: flex; */
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    /* padding: 1rem; */
     box-sizing: inherit;
     position: relative;
 }

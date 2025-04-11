@@ -1,0 +1,30 @@
+
+<div class="card flex justify-center mb-3">
+    <p-selectbutton [options]="stateOptions" [(ngModel)]="value" optionLabel="label" optionValue="value" aria-labelledby="basic" />
+</div>
+<div  *ngIf="value">
+    <div class="card flex justify-center bg-white" >
+       <!--  <div class="flex justify-content-center align-items-center flex-column">
+            <p-button icon="pi pi-check" label="Selecionado" severity="success" [rounded]="true" [outlined]="true" *ngIf="item.value === value"></p-button>
+            <p-button icon="pi pi-times" label="Não selecionado" severity="danger" [rounded]="true" [outlined]="true" *ngIf="item.value !== value"></p-button>
+        </div> -->
+   
+
+    <div class="mb-4 p-4 flex items-center justify-center"*ngFor="let item of stateOptions">
+        <p-card [style]="{ width: '20rem', overflow: 'hidden' }" [class]="item.value"  class="w-full h-full">
+            <ng-template #header>
+                <img alt="Card" class="w-full h-17rem" src="https://kzmit703t1pbtifbonef.lite.vusercontent.net/placeholder.svg?height=600&width=600" />
+            </ng-template>
+            <ng-template #title> {{ value }} </ng-template>
+            <ng-template #subtitle> Card subtitle </ng-template>
+            <p >
+              <span class="font-bold text-lg"> 4000.00.<sup class="text-sm">AOA</sup> </span>-  <s class="text-red-500">8.200. <sup>AOA</sup></s> </p>
+            <ng-template #footer>
+                <div class="flex gap-4 mt-1">
+                    <p-button label="Adicionar ao carrinho" class="w-full" styleClass="w-full" severity="info" />
+                </div>
+            </ng-template>
+        </p-card>
+    </div>
+</div>
+</div>
