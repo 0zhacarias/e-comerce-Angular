@@ -6,8 +6,14 @@ module.exports = {
       "./src/**/*.{html,ts}",
     ],
     theme: {
-      extend: {},
+      extend: {
+        maxWidth: {
+         '8xl': '96rem',
+    'custom-max': '1500px',
+        },
+      },
     },
     darkMode: ['selector', '[class~="my-app-dark"]'],
     plugins: [PrimeUI],
+    
   }

@@ -1,4 +1,4 @@
-<div >
+<div>
   <div class="card flex justify-content-center align-items-center border-round-sm shadow-none bg-white3 py-4">
     <div>
       <p-button icon="pi pi-wallet" severity="info" [outlined]="true" [rounded]="true"
@@ -25,9 +25,12 @@
 </div>
 <div class="bg-white-alpha-80">
   <div class="mx-auto max-w-2xl sm:px-6 sm:py-24 lg:max-w-7xl lg:p-4">
-    <h2 class="font-semibold leading-8 text-gray-900 text-4xl">Novos Produtos</h2>
+    <div class="flex justify-content-between">
+      <h4 class="font-semibold leading-8 text-gray-900 text-4xl bg-auto"> Novos Produtos</h4>
+      <p-button  severity="contrast"  [rounded]="true" [size]="'small'"  [outlined]="false">Explore agora <i class="pi pi-arrow-right"></i> </p-button>
+    </div>
     <div class="my-6 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-4">
-      <div class="group relative " *ngFor="1 let i of [].constructor(6);">
+      <div class="group relative " *ngFor="1 let i of [].constructor(10);">
         <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg"
           alt="Front of men&#039;s Basic Tee in black."
           class="shadow-xl border-dashed border-1 border-blue-400 aspect-square w-full rounded-md bg-gray-200 object-cover opacity-75 group-hover:opacity-100 lg:aspect-auto lg:h-80  hover:shadow-xl">
@@ -47,59 +50,75 @@
 
     </div>
   </div>
+</div>
+<div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-6 mt-5 bg-blue-400 border-round-3xl">
+  <div class="flex  justify-content-between">
+    <div>
+      <h2 class="font-semibold leading-8 text-white text-4xl font-bold ">Há um acordo para você também</h2>
+      <h6 class="text-white font-italic"> Não perca a chance de economizar em itens que você está procurando.</h6>
+    </div>
+    <div>
+
+      <p-button severity="contrast" [text]="true" [rounded]="true" [outlined]="false">Explore agora <i
+          class="pi pi-arrow-right"></i> </p-button>
+    </div>
+
   </div>
-  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-4">
-    <h2 class="font-semibold leading-8 text-gray-900 text-4xl bg-white p-4 border-round-sm">Categorias em destaque</h2>
-    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-2">
-      <!--     <h2 class="font-semibold leading-8 text-gray-900 text-4xl bg-auto"> Produtos Mais Solitados</h2>
- -->
-      <div class="mt-1 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-4">
+</div>
 
-        <div class="group relative" *ngFor="let i of [].constructor(5); let index = index" 
-             (mouseenter)="hoveredIndex = index" (mouseleave)="hoveredIndex = -1">
-          <div
-            class="w-58 lg:h-80 object-cover group-hover:opacity-75 lg:aspect-auto rounded-md bg-white aspect-square align-content-center center">
-            <img
-              src="https://ncrangola.vtexassets.com/arquivos/ids/164712-198-198?v=638753999597100000&width=198&height=198&aspect=true"
-              alt="Front of men&#039;s Basic Tee in black." class="w-48 pt-2 mx-auto">
-            <p-button icon="pi pi-heart" [rounded]="true" severity="info" [outlined]="true"
-              class="absolute top-2 left-2" *ngIf="hoveredIndex === index"></p-button>
 
-            <p-button *ngIf="hoveredIndex === index" icon="pi pi-cart-plus"
-              class="absolute top-2 right-2 flex justify-content-center" severity="info" [rounded]="true"
-              [raised]="true" [outlined]="true" [size]="'small'" placeholder="Adicionar ao carrinho">
-              <span class="text-sm">Adicionar ao carrinho</span>
-            </p-button>
-            <h3 class="flex justify-content-center center">Tintero</h3>
-          </div>
-          <div class="absolute lg:top-100 w-full  border-radius bg-white shadow-2xl rounded-md opacity-1 group-hover:opacity-100 transition duration-300 ease-in-out">
-          <div *ngIf="hoveredIndex === index" class="flex justify-between p-2">
+  <div class="mx-auto max-w-2xl px-2 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-1">
+  <div class="flex  justify-content-between py-4">
+    <h3 class="font-semibold leading-8 text-gray-900 text-4xl bg-auto"> Produtos Mais Solitados</h3>
+    <p-button  severity="contrast" [text]="true"  [rounded]="true"  [outlined]="false">Explore agora <i class="pi pi-arrow-right"></i> </p-button>
+  </div>
+    <div class="mt-1 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+
+      <div class="group relative " *ngFor="let i of [].constructor(10); let index = index"
+        (mouseenter)="hoveredIndex = index" (mouseleave)="hoveredIndex = -1">
+        <div
+          class="w-58 lg:h-80 object-cover group-hover:opacity-100 hover:shadow-2xl lg:aspect-auto rounded-md bg-white aspect-square align-content-center center">
+          <img
+            src="https://ncrangola.vtexassets.com/arquivos/ids/164712-198-198?v=638753999597100000&width=198&height=198&aspect=true"
+            alt="Front of men&#039;s Basic Tee in black." class="w-48 pt-2 mx-auto">
+          <p-button icon="pi pi-heart" [rounded]="true" severity="info" [outlined]="true" class="absolute top-2 left-2"
+            *ngIf="hoveredIndex === index"></p-button>
+
+          <p-button *ngIf="hoveredIndex === index" icon="pi pi-cart-plus"
+            class="absolute top-2 right-2 flex justify-content-center" severity="info" [rounded]="true" [raised]="true"
+            [outlined]="true" [size]="'small'" placeholder="Adicionar ao carrinho">
+            <span class="text-sm">Adicionar ao carrinho</span>
+          </p-button>
+          <h3 class="flex justify-content-center center">Tintero</h3>
+        </div>
+        <div *ngIf="hoveredIndex === index"
+          class="absolute z-1 lg:top-70 w-full  border-radius bg-white shadow-2xl rounded-md opacity-1 group-hover:opacity-100 transition duration-300 ease-in-out">
+          <div class="flex justify-between p-2">
             <div>
               <h3 class="font-medium text-gray-700">
-          <a href="#">
-            <span aria-hidden="true" class="absolute inset-0"></span>
-            Tintero
-          </a>
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Tintero
+                </a>
               </h3>
               <p class="mt-1 text-sm text-gray-500">Black</p>
             </div>
             <p class="text-sm font-medium text-gray-900 text-2xl">3000.00 <sup class="text-sm">AOA</sup></p>
           </div>
-          <p-button *ngIf="hoveredIndex === index" icon="pi pi-cart-plus" [label]="'Itens similar'"
-           styleClass="w-full"
-            class="justify-content-center w-full" severity="info" [rounded]="true" [raised]="true" [outlined]="true">
+          <p-button icon="pi pi-eraser" [label]="'Itens similar'" styleClass="w-full"
+            class="justify-content-center w-full" severity="info" [rounded]="false" [outlined]="false">
           </p-button>
         </div>
       </div>
 
-        <!-- More products... -->
-      </div>
+      <!-- More products... -->
     </div>
   </div>
+
 <div class="bg-white">
 
   <app-carrocel-produtos></app-carrocel-produtos>
 </div>
 <app-produto-mes></app-produto-mes>
 <app-multi-opcoes-produtos></app-multi-opcoes-produtos>
-<div class="py-4"></div>
+<!-- <div class="py-4"></div> -->

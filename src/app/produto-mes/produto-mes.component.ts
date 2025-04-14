@@ -10,4 +10,5 @@ import { RippleModule } from 'primeng/ripple';
 })
 export class ProdutoMesComponent {
   isHovered = false;
+  hoveredIndex = -1||null;
 }

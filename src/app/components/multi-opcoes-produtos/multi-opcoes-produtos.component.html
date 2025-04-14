@@ -3,17 +3,18 @@
     <p-selectbutton [options]="stateOptions" [(ngModel)]="value" optionLabel="label" optionValue="value" aria-labelledby="basic" />
 </div>
 <div  *ngIf="value">
-    <div class="card flex justify-center bg-white" >
-       <!--  <div class="flex justify-content-center align-items-center flex-column">
+    <div class="card flex mx-auto max-w-2xl px-2 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-1" >
+<!--     <div class="card flex justify-center bg-white" >
+ -->       <!--  <div class="flex justify-content-center align-items-center flex-column">
             <p-button icon="pi pi-check" label="Selecionado" severity="success" [rounded]="true" [outlined]="true" *ngIf="item.value === value"></p-button>
             <p-button icon="pi pi-times" label="Não selecionado" severity="danger" [rounded]="true" [outlined]="true" *ngIf="item.value !== value"></p-button>
         </div> -->
    
 
-    <div class="mb-4 p-4 flex items-center justify-center"*ngFor="let item of stateOptions">
-        <p-card [style]="{ width: '20rem', overflow: 'hidden' }" [class]="item.value"  class="w-full h-full">
+    <div class="mb-2 p-2 flex items-center justify-center" *ngFor="let item of stateOptions">
+        <p-card [style]="{ width: '19rem', overflow: 'hidden' }" [class]="item.value"  class="w-full h-full hover:shadow-2xl">
             <ng-template #header>
-                <img alt="Card" class="w-full h-17rem" src="https://kzmit703t1pbtifbonef.lite.vusercontent.net/placeholder.svg?height=600&width=600" />
+                <img alt="Card" class="w-full h-17rem" src="{{item.image}}" />
             </ng-template>
             <ng-template #title> {{ value }} </ng-template>
             <ng-template #subtitle> Card subtitle </ng-template>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ViewChild  } from '@angular/core';
 import { Product } from '../../domain/produtos';
 import { ProdutosserviceService } from '../../service/produtosservice.service';
 import { Carousel } from 'primeng/carousel';
