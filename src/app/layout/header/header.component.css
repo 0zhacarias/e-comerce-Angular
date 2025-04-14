@@ -1,10 +1,10 @@
 .layout-topmenu{
     display: flex;
     justify-content: space-between;
-    align-items:first baseline;
+    align-items:start; 
     background-color: #fff;
     padding: 0 2rem;
-    height: 4rem;
+    height: 4rem; 
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
     z-index: 997;
 }
 
-.layout-topbar {
+ .layout-topbar {
     position: fixed;
     height: 4rem;
     z-index: 997;
@@ -24,10 +24,8 @@
     transition: left var(--layout-section-transition-duration);
      display: flex;
     justify-content: space-between;
-    
-   /* align-items: center; */
 
-}
+} 
 
 .layout-topbar-logo-container {
     width: 20rem;
