@@ -1,3 +1,17 @@
+.layout-topmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items:first baseline;
+    background-color: #fff;
+    padding: 0 2rem;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 997;
+}
+
 .layout-topbar {
     position: fixed;
     height: 4rem;
@@ -37,9 +51,7 @@
     display: inline-block;
     margin-left: 0.5rem;
 }
-.layout-topbar .p-megamenu {
-    width: 200rem;
-}
+
 .layout-topbar-action {
     display: inline-flex;
     justify-content: center;

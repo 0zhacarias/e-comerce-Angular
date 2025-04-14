@@ -1,43 +1,72 @@
-<!-- <p-menubar [model]="items" class="bg-blue-500 ">
-    <ng-template pTemplate="start">
-      <span class="text-xl font-bold">My E-Commerce</span>
-    </ng-template>
-    <ng-template pTemplate="end">
-      <button pButton icon="pi pi-user" class="p-button-rounded p-button-text"></button>
-    </ng-template>
+<div class="layout-topmenu py-2">
+    <div class="relative group " (mouseenter)="toggleMenu(true)" (mouseleave)="toggleMenu(false)">
+        <button class="px-4 py-2 font-semibold hover:text-blue-600">Informática</button>
+        <div class="relative top-full left-0 z-50 w-full bg-white shadow-lg pt-6 pb-8 transition-all duration-200"
+            *ngIf="showMenu">
+            <div class="max-w-7xl mx-auto grid grid-cols-5 gap-8 px-6">
+                <!-- Coluna 1 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Desktop</h3>
+                    <ul class="space-y-1 text-sm text-gray-600 py-2">
+                        <li class="hover:text-blue-500 font-bold ">StandAlone</li>
+                        <li>iMac</li>
+                        <li>Mini PC</li>
+                        <li>All-In-One</li>
+                        <li>Monitor + PC</li>
+                        <li class="font-medium text-blue-500 cursor-pointer">Ver todos os produtos</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Portáteis</h3>
+                    <ul class="space-y-1 text-sm text-gray-600">
+                        <li>MacBook</li>
+                        <li>Portáteis Gaming</li>
+                        <li>Casa e Escritório</li>
+                        <li>Acessórios para portáteis</li>
+                        <li class="font-medium text-blue-500 cursor-pointer">Ver todos os produtos</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Acessórios</h3>
+                    <ul class="space-y-1 text-sm text-gray-600">
+                        <li>Bases, Tapetes</li>
+                        <li>Cabos</li>
+                        <li>Dockstation</li>
+                        <li>Memórias RAM</li>
+                        <li>Transformadores</li>
+                        <li class="font-medium text-blue-500 cursor-pointer">Ver todos os produtos</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Mais</h3>
+                    <ul class="space-y-1 text-sm text-gray-600">
+                        <li>Armazenamento +</li>
+                        <li>Impressão +</li>
+                        <li>Redes e Internet +</li>
+                        <li>Software +</li>
+                        <li>Monitores +</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 5 - Imagem ou destaque -->
+                <div class="flex items-center justify-center">
+                    <img src="https://ncrangola.vtexassets.com/assets/vtex.file-manager-graphql/images/91bfb3f5-be61-425f-8fa1-7433788ca933___19bf975c83569cadf01926bfd71341b1.webp"
+                        alt="banner" class="rounded-lg shadow-md" />
+                </div>
+            </div>
+        </div>
+    </div>
     
-  </p-menubar>
-  <div class="h-96 bg-gradient-to-r from-red-500 to-pink-500 via-purple-500"></div>
+        <div class="layout-topbar-menu hidden lg:block ">
 
-
-  <h1 class="text-3xl font-bold underline h-2">
-    Hello world!
-  </h1> -->
-  <div class="layout-topbar">
-    <div class="layout-topbar-logo-container">
-        <button class="layout-menu-button layout-topbar-action" >
-            <i class="pi pi-bars"></i>
-        </button>
-        <a class="layout-topbar-logo" routerLink="/">
-            
-            <span>SAKAI</span>
-        </a>
-        
-    </div>
-    <div class="p-megamenu">
-
-        <p-megamenu [model]="MenusItems" />
-    </div>
-    <div class="layout-topbar-actions">
-      
-        <button class="layout-topbar-menu-button layout-topbar-action" pStyleClass="@next" enterFromClass="hidden" enterActiveClass="animate-scalein" leaveToClass="hidden" leaveActiveClass="animate-fadeout" >
-            <i class="pi pi-ellipsis-v"></i>
-        </button>
-       
-        <div class="layout-topbar-menu hidden lg:block px-6">
-          
             <div class="layout-topbar-menu-content">
-                
+
                 <button type="button" class="layout-topbar-action">
                     <i class="pi pi-calendar"></i>
                     <span>Calendar</span>
@@ -56,6 +85,51 @@
                 </button>
             </div>
         </div>
-    </div>
-      
+    
 </div>
+
+<!-- <div class="layout-topbar">
+    <div class="layout-topbar-logo-container">
+        <button class="layout-menu-button layout-topbar-action">
+            <i class="pi pi-bars"></i>
+        </button>
+        <a class="layout-topbar-logo" routerLink="/">
+
+            <span>SAKAI</span>
+        </a>
+
+    </div>
+
+    <div class="relative group " (mouseenter)="toggleMenu(true)" (mouseleave)="toggleMenu(false)">
+        <div class="layout-topbar-actions">
+
+            <button class="layout-topbar-menu-button layout-topbar-action" pStyleClass="@next" enterFromClass="hidden"
+                enterActiveClass="animate-scalein" leaveToClass="hidden" leaveActiveClass="animate-fadeout">
+                <i class="pi pi-ellipsis-v"></i>
+            </button>
+
+            <div class="layout-topbar-menu hidden lg:block px-6">
+
+                <div class="layout-topbar-menu-content">
+
+                    <button type="button" class="layout-topbar-action">
+                        <i class="pi pi-calendar"></i>
+                        <span>Calendar</span>
+                    </button>
+                    <button type="button" class="layout-topbar-action">
+                        <i class="pi pi-inbox"></i>
+                        <span>Messages</span>
+                    </button>
+                    <button type="button" class="layout-topbar-action">
+                        <i class="pi pi-user"></i>
+                        <span>Profile</span>
+                    </button>
+                    <button type="button" class="layout-topbar-action ">
+                        <i class="pi pi-shopping-cart"></i>
+                        <span>Carrinho</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div> -->

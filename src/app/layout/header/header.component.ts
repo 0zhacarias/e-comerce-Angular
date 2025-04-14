@@ -4,9 +4,10 @@ import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 import { MegaMenuItem } from 'primeng/api';
 import { MegaMenu } from 'primeng/megamenu';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-header',
-  imports: [MenubarModule, ButtonModule,MegaMenu],
+  imports: [MenubarModule, ButtonModule,MegaMenu,CommonModule],
 
    templateUrl: './header.component.html',
   styleUrl: './header.component.css' 
@@ -14,7 +15,11 @@ import { MegaMenu } from 'primeng/megamenu';
 export class HeaderComponent {
  // items: MenubarModule[] = [];
   MenusItems: MegaMenuItem[] = [];
+  showMenu = false;
 
+  toggleMenu(state: boolean) {
+    this.showMenu = state;
+  }
   ngOnInit() {
   /*   this.items = [
       { label: 'Home', icon: 'pi pi-home', routerLink: '/' },

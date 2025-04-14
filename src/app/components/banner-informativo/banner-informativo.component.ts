@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { MegaMenuItem } from 'primeng/api';
 import { MegaMenu } from 'primeng/megamenu';
+
 @Component({
   selector: 'app-banner-informativo',
   imports: [ButtonModule,MegaMenu],
