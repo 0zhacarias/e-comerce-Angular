@@ -1,17 +1,37 @@
 
 <div class="card flex justify-center mb-3">
-    <p-selectbutton [options]="stateOptions" [(ngModel)]="value" optionLabel="label" optionValue="value" aria-labelledby="basic" />
+    <p-selectbutton [options]="TodasCategorias" 
+    [(ngModel)]="value" optionLabel="label" 
+    optionValue="value" aria-labelledby="basic" 
+    (ngModelChange)="selecionarCategoria()" />
 </div>
 <div  *ngIf="value">
-    <div class="card flex mx-auto max-w-2xl px-2 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-1" >
-<!--     <div class="card flex justify-center bg-white" >
- -->       <!--  <div class="flex justify-content-center align-items-center flex-column">
-            <p-button icon="pi pi-check" label="Selecionado" severity="success" [rounded]="true" [outlined]="true" *ngIf="item.value === value"></p-button>
-            <p-button icon="pi pi-times" label="Não selecionado" severity="danger" [rounded]="true" [outlined]="true" *ngIf="item.value !== value"></p-button>
-        </div> -->
-   
+     <div class="mx-auto max-w-2xl sm:px-6 sm:py-24 lg:max-w-full justify-content-center grid grid-cols-1 gap-x-1 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-1" >
 
-    <div class="mb-2 p-2 flex items-center justify-center" *ngFor="let item of stateOptions">
+    <div class="mb-2 px-2 flex" *ngFor="let item of filtrarOpcoes">
+       
+        <p-card [style]="{ width: '20rem', overflow: 'hidden' }" [class]="item.value"  class="w-full h-full hover:shadow-2xl">
+            <ng-template #header>
+                <img alt="Card" class="w-full h-17rem p-6" src="{{item.image}}" />
+            </ng-template>
+            <ng-template #title> {{value }} </ng-template>
+            <ng-template #subtitle> {{item.designacao|json}} </ng-template>
+            <p >
+              <span class="font-bold text-3xl"> {{item.preco-item.desconto}}<sup class="text-lg">AOA</sup> </span>-  <s class="text-red-500 text-xl">{{item.preco}} <sup>AOA</sup></s> </p>
+            <ng-template #footer>
+                <div class="flex gap-4 mt-1">
+                    <p-button label="Adicionar ao carrinho" class="w-full" styleClass="w-full" severity="info" />
+                </div>
+            </ng-template>
+        </p-card>
+    </div>
+</div> 
+
+</div>
+<!-- <div class="mx-auto max-w-2xl px-2 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-2" >
+<p-carousel [value]="stateOptions" [numVisible]="3" [numScroll]="2"  [responsiveOptions]="responsiveOptions" [circular]="true" [showIndicators]="true" [styleClass]="'custom-carousel'" autoplayInterval="3000" >
+
+    <ng-template let-item #item>
         <p-card [style]="{ width: '19rem', overflow: 'hidden' }" [class]="item.value"  class="w-full h-full hover:shadow-2xl">
             <ng-template #header>
                 <img alt="Card" class="w-full h-17rem" src="{{item.image}}" />
@@ -26,6 +46,6 @@
                 </div>
             </ng-template>
         </p-card>
-    </div>
-</div>
-</div>
+    </ng-template>
+</p-carousel>
+</div> -->

@@ -9,10 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { DividerModule } from 'primeng/divider';
 import { MultiOpcoesProdutosComponent } from '../multi-opcoes-produtos/multi-opcoes-produtos.component';
+import { ProdutosNovosComponent } from "../produtos-novos/produtos-novos.component";
 
 @Component({
   selector: 'app-produtos',
-  imports: [ButtonModule, CarrocelProdutosComponent, ProdutoMesComponent,CommonModule,DividerModule, FormsModule,ReactiveFormsModule,MultiOpcoesProdutosComponent],
+  imports: [ButtonModule, CarrocelProdutosComponent, ProdutoMesComponent, CommonModule, DividerModule, FormsModule, ReactiveFormsModule, MultiOpcoesProdutosComponent, ProdutosNovosComponent],
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.css',
 

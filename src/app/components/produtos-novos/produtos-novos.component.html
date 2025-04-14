@@ -1,0 +1,49 @@
+<div class="bg-white-alpha-820">
+<div class="mx-auto max-w-2xl px-2 sm:px-6 sm:py-24 lg:max-w-7xl lg:p-1">
+    <div class="flex  justify-content-between py-4">
+      <h3 class="font-semibold leading-8 text-gray-900 text-3xl bg-auto"> Produtos novos</h3>
+      <p-button  severity="contrast" [text]="true"  [rounded]="true"  [outlined]="false">Explore agora <i class="pi pi-arrow-right"></i> </p-button>
+    </div>
+      <div class="mt-1 grid grid-cols-1 gap-x-2 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-2">
+  
+        <div class="group relative " *ngFor="let i of [].constructor(10); let index = index"
+          (mouseenter)="hoveredIndex = index" (mouseleave)="hoveredIndex = -1">
+          <div
+            class="w-62 lg:h-80 object-cover group-hover:opacity-100 hover:shadow-2xl lg:aspect-auto rounded-md bg-white aspect-square align-content-center center">
+            <img
+              src="https://ncrangola.vtexassets.com/arquivos/ids/164712-198-198?v=638753999597100000&width=198&height=198&aspect=true"
+              alt="Front of men&#039;s Basic Tee in black." class="w-48 pt-2 mx-auto">
+            <p-button icon="pi pi-heart" [rounded]="true" severity="info" [outlined]="true" class="absolute top-2 left-2"
+              *ngIf="hoveredIndex === index"></p-button>
+  
+            <p-button *ngIf="hoveredIndex === index" icon="pi pi-cart-plus"
+              class="absolute top-2 right-2 flex justify-content-center" severity="info" [rounded]="true" [raised]="true"
+              [outlined]="true" [size]="'small'">
+            </p-button>
+            <h3 class="flex justify-content-center center">Tintero</h3>
+          </div>
+          <div *ngIf="hoveredIndex === index"
+            class="absolute z-1 lg:top-70 w-full  border-radius bg-white shadow-2xl rounded-md opacity-1 group-hover:opacity-100 transition duration-300 ease-in-out">
+            <div class="flex justify-between p-2">
+              <div>
+                <h3 class="font-medium text-gray-700">
+                  <a href="#">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Tintero
+                  </a>
+                </h3>
+                <p class="mt-1 text-sm text-gray-500">Black</p>
+              </div>
+              <p class="text-sm font-medium text-gray-900 text-2xl">3000.00 <sup class="text-sm">AOA</sup></p>
+            </div>
+            <p-button icon="pi pi-eraser" [label]="'Itens similar'" styleClass="w-full"
+              class="justify-content-center w-full" severity="info" [rounded]="false" [outlined]="false">
+            </p-button>
+          </div>
+        </div>
+  
+        <!-- More products... -->
+      </div>
+    </div>
+  
+</div>

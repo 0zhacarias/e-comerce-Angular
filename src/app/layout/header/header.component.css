@@ -8,8 +8,10 @@
     padding: 0 2rem;
     background-color: #fff;
     transition: left var(--layout-section-transition-duration);
-    display: flex;
-    align-items: center;
+     display: flex;
+    justify-content: space-between;
+    
+   /* align-items: center; */
 
 }
 
@@ -34,6 +36,9 @@
     font-weight: 500;
     display: inline-block;
     margin-left: 0.5rem;
+}
+.layout-topbar .p-megamenu {
+    width: 200rem;
 }
 .layout-topbar-action {
     display: inline-flex;
@@ -65,17 +70,19 @@ span {
 .layout-topbar-menu-button {
     display: none;
 }
-.layout-topbar-menu-content >span{
-    background-color: #fff;
-}
 .layout-topbar-actions {
     margin-left: auto;
     display: flex;
-    gap: 1rem;
+     gap: 1rem; 
+    background-color: #fff;
+}
+
+.layout-topbar-menu-content >span{
     background-color: #fff;
 }
 
 .layout-topbar-menu-content {
+   
     display: flex;
     gap: 1rem;
     background-color: #fff;

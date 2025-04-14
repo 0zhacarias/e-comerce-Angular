@@ -22,16 +22,22 @@
             
             <span>SAKAI</span>
         </a>
+        
     </div>
+    <div class="p-megamenu">
 
+        <p-megamenu [model]="MenusItems" />
+    </div>
     <div class="layout-topbar-actions">
       
         <button class="layout-topbar-menu-button layout-topbar-action" pStyleClass="@next" enterFromClass="hidden" enterActiveClass="animate-scalein" leaveToClass="hidden" leaveActiveClass="animate-fadeout" >
             <i class="pi pi-ellipsis-v"></i>
         </button>
-
+       
         <div class="layout-topbar-menu hidden lg:block px-6">
+          
             <div class="layout-topbar-menu-content">
+                
                 <button type="button" class="layout-topbar-action">
                     <i class="pi pi-calendar"></i>
                     <span>Calendar</span>
