@@ -1,18 +1,26 @@
 .layout-topmenu{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items:start; 
-    background-color: #fff;
-    padding: 0 2rem;
-    height: 4rem; 
+     background-color: #fff;
+    /*  padding: 0 2rem; */
+     height: 4rem;  
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 997;
 }
-
- .layout-topbar {
+.layout-top-item{
+ /*    width: 140%;
+    display: block;
+    right: 100px;
+    background-color: #fff; */
+    margin-left: -15%;
+    width: 150%;
+    margin-top: .8rem;
+}
+/*  .layout-topbar {
     position: fixed;
     height: 4rem;
     z-index: 997;
@@ -25,10 +33,10 @@
      display: flex;
     justify-content: space-between;
 
-} 
+}  */
 
 .layout-topbar-logo-container {
-    width: 20rem;
+    width: 10rem;
     display: flex;
     align-items: center;
 }

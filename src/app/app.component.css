@@ -12,4 +12,5 @@
     /* padding: 1rem; */
     box-sizing: inherit;
     position: relative;
+    overflow-x: hidden;
 }

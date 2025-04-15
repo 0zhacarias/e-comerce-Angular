@@ -7,6 +7,11 @@ import { MegaMenu } from 'primeng/megamenu';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule,FormControl, FormGroup, } from '@angular/forms';
 import { Listbox } from 'primeng/listbox';
+import { InputGroup } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { InputTextModule } from 'primeng/inputtext';
+import { MenuModule } from 'primeng/menu';
+
 
 interface City {
   name: string,
@@ -15,17 +20,18 @@ interface City {
 
 @Component({
   selector: 'app-header',
-  imports: [MenubarModule, ButtonModule,MegaMenu,CommonModule,FormsModule,Listbox,ReactiveFormsModule],
+  imports: [MenubarModule, ButtonModule,MegaMenu,CommonModule,FormsModule,Listbox,ReactiveFormsModule,InputGroup,InputGroupAddonModule,InputTextModule,MenuModule],
 
    templateUrl: './header.component.html',
   styleUrl: './header.component.css' 
 })
 export class HeaderComponent {
- // items: MenubarModule[] = [];
+  items: MenuItem[] = [];
   MenusItems: MegaMenuItem[] = [];
   showMenu = false;
   cities!: City[];
   formGroup!: FormGroup;
+  value: string|undefined;
 
     selectedCity!: City;
   toggleMenu(state: boolean) {
@@ -34,12 +40,12 @@ export class HeaderComponent {
   itemClicado(event: any) {
     alert(JSON.stringify(event));}
   ngOnInit() {
-  /*   this.items = [
+     this.items = [
       { label: 'Home', icon: 'pi pi-home', routerLink: '/' },
       { label: 'Products', icon: 'pi pi-box', routerLink: '/products' },
       { label: 'Cart', icon: 'pi pi-shopping-cart', routerLink: '/cart' },
       { label: 'Contact', icon: 'pi pi-envelope', routerLink: '/contact' },
-    ]; */
+    ]; 
     this.cities = [
       { name: 'iMac', code: 'NY' },
       { name: 'Mini PC', code: 'RM' },
