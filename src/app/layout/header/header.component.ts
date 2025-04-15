@@ -11,6 +11,8 @@ import { InputGroup } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenuModule } from 'primeng/menu';
+import { OverlayBadgeModule } from 'primeng/overlaybadge';
+
 
 
 interface City {
@@ -20,7 +22,7 @@ interface City {
 
 @Component({
   selector: 'app-header',
-  imports: [MenubarModule, ButtonModule,MegaMenu,CommonModule,FormsModule,Listbox,ReactiveFormsModule,InputGroup,InputGroupAddonModule,InputTextModule,MenuModule],
+  imports: [MenubarModule, ButtonModule,OverlayBadgeModule,CommonModule,FormsModule,Listbox,ReactiveFormsModule,InputGroup,InputGroupAddonModule,InputTextModule,MenuModule],
 
    templateUrl: './header.component.html',
   styleUrl: './header.component.css' 
